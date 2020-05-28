@@ -17,13 +17,18 @@ def validate(key, data):
 	if key in data:
 		return key
 	elif len(difflib.get_close_matches(key, data)) > 0:
-		action = input('Did you mean {} instead? Enter Y if yes, or N if no: '.format(difflib.get_close_matches(key, data.keys(), n=1)[0]))
-		if action == 'Y':
-			print('yes')
-		elif action == 'N':
-			print('The word doesn\'t exist. Please double check it.')		
-		else:
-			print('try again')
+		while True:
+			print('Did you mean {} instead? '.format(difflib.get_close_matches(key, data.keys(), n=1)[0]))
+			action = input('Enter Y if yes, or N if no: ')
+			if action == 'Y':
+				print('yes')
+				break
+			elif action == 'N':
+				print('The word doesn\'t exist. Please double check it.')
+				break		
+			else:
+				print('Try again. Y or N')
+
 		return False
 
 	else:
