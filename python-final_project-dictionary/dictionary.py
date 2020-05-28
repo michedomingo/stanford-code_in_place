@@ -9,6 +9,7 @@ def main():
 	dict_data = json.load(open('data.json'))
 	word = input('Enter word: ')
 	word = validate(word.lower(), dict_data)
+	print(word)
 	if word == False:
 		return
 	translate(word, dict_data)
@@ -22,17 +23,21 @@ def validate(key, data):
 			action = input('Enter Y if yes, or N if no: ')
 			if action == 'Y':
 				print('yes')
-				break
+				word = difflib.get_close_matches(key, data.keys(), n=1)[0]
+				return word
+				# break
+
 			elif action == 'N':
-				print('The word doesn\'t exist. Please double check it.')
-				break		
+				print('IN while - The word doesn\'t exist. Please double check it.')
+				# break
+				return False
 			else:
 				print('Try again. Y or N')
 
-		return False
+		# return False
 
 	else:
-		print('The word doesn\'t exist. Please double check it.')
+		print('outside while - The word doesn\'t exist. Please double check it.')
 		return False
 
 def translate(key, data):
