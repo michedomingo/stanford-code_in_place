@@ -3,7 +3,7 @@
 # incorporate loading of the json file
 # print the output
 import json
-
+import difflib
 
 def main():
 	dict_data = json.load(open('data.json'))
@@ -16,6 +16,13 @@ def main():
 def validate(key, data):
 	if key in data:
 		return key
+	elif len(difflib.get_close_matches(key, data)) > 0:
+		action = input('Did you mean {} instead? Enter Y if yes, or N if no: '.format(difflib.get_close_matches(key, data.keys(), n=1)[0]))		
+		if action == 'Y':
+			print('yes')
+		elif action == 'N':
+			print('The word doesn\'t exist. Please double check it.')		
+		return False
 	else:
 		print('The word doesn\'t exist. Please double check it.')
 		return False
