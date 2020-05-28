@@ -9,11 +9,16 @@ def main():
 	dict_data = json.load(open('data.json'))
 	word = input('Enter word: ')
 	word = validate(word.lower(), dict_data)
+	if word == False:
+		return
 	translate(word, dict_data)
 
 def validate(key, data):
-	if key in data.keys():
+	if key in data:
 		return key
+	else:
+		print('The word doesn\'t exist. Please double check it.')
+		return False
 
 def translate(key, data):
 	print('\n'.join("{}".format(info) for info in data.get(key)))
