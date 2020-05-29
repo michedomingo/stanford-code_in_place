@@ -9,10 +9,22 @@ import difflib
 def main():
     dict_data = json.load(open('data.json'))
     word = input('Enter word: ')
-    word = validate(word.lower(), dict_data)
+    word = update_case(word, dict_data)
+    word = validate(word, dict_data)
     if word is False:
         return
     translate(word, dict_data)
+
+
+def update_case(key, data):
+    if key.lower() in data:
+        key = key.lower()
+        return key
+    elif key.capitalize() in data:
+        key = key.capitalize()
+        return key
+    else:
+        return key
 
 
 def validate(key, data):
