@@ -23,6 +23,9 @@ def update_case(key, data):
     elif key.capitalize() in data:
         key = key.capitalize()
         return key
+    elif key.upper() in data:
+        key = key.upper()
+        return key    
     else:
         return key
 
