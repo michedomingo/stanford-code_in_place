@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://compedu.stanford.edu/codeinplace/public/assets/img/logo.png" height="40%" width="40%">
+</p>
+
 # Final Project: A simple Dictionary
 
 ### Code in Place, offered online by Stanford University April-May 2020
