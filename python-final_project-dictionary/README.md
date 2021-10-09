@@ -13,7 +13,7 @@ Participant in Stanford's first Code in Place (April - May 2020), with 10,000 gl
 
 <br>
 
-[![Code in Place 2021 twitter thread](docs/CIP2020tweet.png)](https://twitter.com/micheflamingo/status/1249907331703291904 'Click to learn more about Code in Place 2020!')
+[![Code in Place 2021 twitter thread](./docs/CIP2020tweet.png)](https://twitter.com/micheflamingo/status/1249907331703291904 'Click to learn more about Code in Place 2020!')
 
 ---
 
