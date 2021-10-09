@@ -9,7 +9,7 @@ Participant in Stanford's first Code in Place (April - May 2020), with 10,000 gl
 
 - [Showcase - a simple Dictionary](https://compedu.stanford.edu/codeinplace/public/projects/1326.html)
 
-- [Code](./python-final_project-dictionary/dictionary.py)
+- [Code](https://github.com/michedomingo/stanford-code_in_place/blob/master/python-final_project-dictionary/dictionary.py)
 
 <br>
 
